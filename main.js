@@ -8,7 +8,10 @@ function createWindow() { //fonction qui créée une fenêtre et la configure
         height: 600, //taille en hauteur initialement de la fenêtre
         backgroundColor: "white",
         webPreferences: {
-            nodeIntegration: false //permet à notre application/fenetre d'utiliser des fonctionnalitées node.js si il est en true mais pour une question de sécurité on le met en false
+            nodeIntegration: false, //permet à notre application/fenetre d'utiliser des fonctionnalitées node.js si il est en true mais pour une question de sécurité on le met en false
+            worldSafeExecuteJavaScript: true, // voir la rubrique securité de electron
+            contextIsolation: true, // voir la rubrique securité de electron
+            allowRunningInsecureContent:false // voir la rubrique securité de electron
         }
     });
     //win.removeMenu(); Permet de supprimer le menu du haut
