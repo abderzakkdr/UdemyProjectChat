@@ -1,6 +1,6 @@
 
 const { app, BrowserWindow, Notification } = require('electron')
-const path = require('path')
+// const path = require('path')
 
 function createWindow() { //fonction qui créée une fenêtre et la configure
     const win = new BrowserWindow({ //instancie une fenêtre
@@ -8,7 +8,7 @@ function createWindow() { //fonction qui créée une fenêtre et la configure
         height: 600, //taille en hauteur initialement de la fenêtre
         backgroundColor: "white",
         webPreferences: {
-            nodeIntegration: true //permet à notre application/fenetre d'utiliser des fonctionnalitées node.js
+            nodeIntegration: false //permet à notre application/fenetre d'utiliser des fonctionnalitées node.js si il est en true mais pour une question de sécurité on le met en false
         }
     });
     //win.removeMenu(); Permet de supprimer le menu du haut
@@ -37,6 +37,7 @@ app.on('activate', () => { //si l'application n'est pas shut-down mais activé c
         createWindow(); //on créée une fenêtre
     }
 })
+
 
 // Chromium -> moteur Web pour le rendu de l'interface utilisateur, navigateur Web de type Chrome complet
 // V8 -> engine that provides capabilities to execute, run, JS code in the browser
