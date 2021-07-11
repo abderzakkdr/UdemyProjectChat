@@ -1,0 +1,3 @@
+Au debut nous avons fait un npm init pour avoir le fichier package.json
+Pour les installations des packages un npm install --save-dev electron
+A la suite de l'installation le dossier node_modules et le fichier âckage-lock.json sont apparues
